@@ -1,4 +1,9 @@
+using MicroServiceEduCustomer.Application.Mappers;
+using MicroServiceEduCustomer.Application.Services;
+using MicroServiceEduCustomer.Domain.Repository;
 using MicroServiceEduCustomer.Persistence;
+using MicroServiceEduCustomer.Persistence.Mappers;
+using MicroServiceEduCustomer.Persistence.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,7 +33,15 @@ namespace MicroServiceEduCustomer
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MicroServiceEduCustomer", Version = "v1" });
             });
-            
+
+
+            //Injection
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<ICustomerEfMapper, CustomerEfMapper>();
+            services.AddScoped<ICustomerDtoMapper, CustomerDtoMapper>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

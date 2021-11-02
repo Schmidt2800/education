@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MicroServiceEduCustomer.Domain.Model
 {
-    public class Customer : ICustomer
+    public interface ICustomer
     {
         public int ID { get; set; }
         public string FirstName { get; set; }

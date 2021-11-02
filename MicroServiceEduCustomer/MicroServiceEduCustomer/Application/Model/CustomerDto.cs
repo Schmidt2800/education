@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MicroServiceEduCustomer.Domain.Model
+namespace MicroServiceEduCustomer.Application.Model
 {
-    public class Customer : ICustomer
+    public class CustomerDto
     {
         public int ID { get; set; }
         public string FirstName { get; set; }
