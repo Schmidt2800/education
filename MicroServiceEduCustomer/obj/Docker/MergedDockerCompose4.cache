@@ -1,0 +1,45 @@
+services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Your_password123
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+    - published: 12433
+      target: 1433
+    restart: always
+  microserviceeducustomer:
+    build:
+      context: C:\udv\education\MicroServiceEduCustomer
+      dockerfile: MicroServiceEduCustomer/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: MicroServiceEduCustomer
+      target: base
+    container_name: MicroServiceEduCustomer
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: microserviceeducustomer:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/MicroServiceEduCustomer.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer:/app:rw
+    - C:\Users\rsc\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\rsc\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\rsc\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - c:\udv\nuget_packages:/root/.nuget/packages:ro
+    - C:\udv\education\MicroServiceEduCustomer:/src:rw
+version: '3.4'
