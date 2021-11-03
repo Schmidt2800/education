@@ -11,12 +11,12 @@ namespace MicroServiceEduProductCatalog.Application.Mappers
     {
         public IProduct Create(ProductDto productDto)
         {
-            return new ProductEf
+            return new Product
             {
-                ID = product.ID,
-                Name = product.Name,
-                Price = product.Price,
-                EAN = product.EAN
+                ID = productDto.ID,
+                Name = productDto.Name,
+                Price = productDto.Price,
+                EAN = productDto.EAN
             };
         }
 
