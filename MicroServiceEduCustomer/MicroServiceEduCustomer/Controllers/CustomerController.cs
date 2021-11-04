@@ -19,13 +19,15 @@ namespace MicroServiceEduCustomer.Controllers
         {
             _CustomerService = customerService;
         }
-        [HttpGet]
-        [Route("api/{id}")]
-        public CustomerDto Get(int id)
+        // GET by Id action
+        [HttpGet("{id}")]
+        public ActionResult<CustomerDto> Get(int id)
         {
             var customer = _CustomerService.Get(id);
 
-            
+            if (customer == null)
+                return NotFound();
+
             return customer;
         }
         [HttpGet]
