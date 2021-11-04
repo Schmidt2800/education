@@ -16,7 +16,17 @@ namespace MicroServiceEduOrder.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<OrderEf>().ToTable("Order");
+            //modelBuilder.Entity<OrderEf>().ToTable("Order");
+            //modelBuilder.Entity<OrderLineEf>().ToTable("OrderLine");
+            modelBuilder.Entity<OrderLineEf>()
+.HasOne(ol => ol.Order)
+.WithMany(o => o.);
+
+
+
+            modelBuilder.Entity<OrderEf>()
+            .Navigation(o => o.OrdreDetailsEf)
+            .UsePropertyAccessMode(PropertyAccessMode.Property);
         }
     }
 }

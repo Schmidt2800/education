@@ -5,6 +5,7 @@ using MicroServiceEduOrder.Domain.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace MicroServiceEduOrder.Application.Services
@@ -13,10 +14,12 @@ namespace MicroServiceEduOrder.Application.Services
     {
         private readonly IOrderRepository _OrderRepository;
         private readonly IOrderDtoMapper _OrderDtoMapper;
+        private readonly HttpClient _Client;
         public OrderService(IOrderRepository orderRepository, IOrderDtoMapper orderDtoMapper)
         {
             _OrderRepository = orderRepository;
             _OrderDtoMapper = orderDtoMapper;
+            _Client = new HttpClient();
         }
         public OrderDto Create(OrderDto orderDto)
         {
@@ -33,7 +36,7 @@ namespace MicroServiceEduOrder.Application.Services
         }
         private void GenerateDocument(IOrder order)
         {
-
+            var customer = _Client.GetStringAsync($"http://localhost:8080/Customer/{order.CustomerId}");
         }
     }
 }
