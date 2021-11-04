@@ -1,4 +1,13 @@
 services:
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: Your_password123
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+    - published: 13433
+      target: 1433
+    restart: always
   microserviceeduorder:
     build:
       context: C:\udv\education\MicroServiceEduOrder

@@ -9,6 +9,7 @@ namespace MicroServiceEduCustomer.Application.Services
     public interface ICustomerService
     {
         public CustomerDto Get(int customerId);
+        public IEnumerable<CustomerDto> GetAll();
         public CustomerDto Create(CustomerDto customerDto);
     }
 }

@@ -53,8 +53,8 @@ C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\staticwebassets\MicroServiceEduProductCatalog.StaticWebAssets.xml
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\scopedcss\bundle\MicroServiceEduProductCatalog.styles.css
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\MicroServiceEduProductCatalog.RazorTargetAssemblyInfo.cache
-C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\MicroServiceEduProductCatalog.csproj.CopyComplete
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\MicroServiceEduProductCatalog.dll
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\ref\MicroServiceEduProductCatalog.dll
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\MicroServiceEduProductCatalog.pdb
 C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\MicroServiceEduProductCatalog.genruntimeconfig.cache
+C:\udv\education\MicroServiceEduProductCatalog\MicroServiceEduProductCatalog\obj\Debug\net5.0\MicroServiceEduProductCatalog.csproj.AssemblyReference.cache

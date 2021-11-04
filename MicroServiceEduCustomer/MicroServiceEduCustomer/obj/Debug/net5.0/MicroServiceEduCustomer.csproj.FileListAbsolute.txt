@@ -7,9 +7,11 @@ C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\MicroServiceEduCustomer.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\ref\MicroServiceEduCustomer.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\MicroServiceEduCustomer.pdb
+C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Humanizer.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
@@ -41,7 +43,6 @@ C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.csproj.AssemblyReference.cache
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.GeneratedMSBuildEditorConfig.editorconfig
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.AssemblyInfoInputs.cache
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.AssemblyInfo.cs
@@ -56,5 +57,4 @@ C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\ref\MicroServiceEduCustomer.dll
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.pdb
 C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.genruntimeconfig.cache
-C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Humanizer.dll
-C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\udv\education\MicroServiceEduCustomer\MicroServiceEduCustomer\obj\Debug\net5.0\MicroServiceEduCustomer.csproj.AssemblyReference.cache

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  microserviceeduproductcatalog:
+    image: ${DOCKER_REGISTRY-}microserviceeduproductcatalog
+    build:
+      context: .
+      dockerfile: MicroServiceEduProductCatalog/Dockerfile

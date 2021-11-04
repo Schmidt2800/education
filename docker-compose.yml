@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  microserviceeducustomer:
+    image: ${DOCKER_REGISTRY-}microserviceeducustomer
+    ports:
+     - 8080:80    
+    build:
+      context: C:\udv\education\MicroServiceEduCustomer
+      dockerfile: MicroServiceEduCustomer\Dockerfile
+  microserviceeduorder:
+    image: ${DOCKER_REGISTRY-}microserviceeduorder
+    ports:
+     - 8081:80    
+    build:
+      context: C:\udv\education\MicroServiceEduOrder
+      dockerfile: MicroServiceEduOrder\Dockerfile       
+  microserviceeduproductcatalog:
+    image: ${DOCKER_REGISTRY-}microserviceeduproductcatalog
+    ports:
+     - 8082:80        
+    build:
+      context: C:\udv\education\MicroServiceEduProductCatalog
+      dockerfile: MicroServiceEduProductCatalog/Dockerfile
+  microserviceedudocumentgenerator:
+    image: ${DOCKER_REGISTRY-}microserviceedudocumentgenerator
+    ports:
+     - 8083:80      
+    build:
+      context: C:\udv\education\MicroServiceEduDocumentGenerator
+      dockerfile: MicroServiceEduDocumentGenerator/Dockerfile
+  db:
+   image: mcr.microsoft.com/mssql/server:2019-latest
+   restart: always
+   ports:
+    - 12433:1433
+   environment:
+       SA_PASSWORD: Your_password123
+       ACCEPT_EULA: Y    

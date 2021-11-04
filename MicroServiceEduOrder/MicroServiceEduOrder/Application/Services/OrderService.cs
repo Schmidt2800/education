@@ -1,5 +1,6 @@
 ﻿using MicroServiceEduOrder.Application.Mappers;
 using MicroServiceEduOrder.Application.Model;
+using MicroServiceEduOrder.Domain.Model;
 using MicroServiceEduOrder.Domain.Repository;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,7 @@ namespace MicroServiceEduOrder.Application.Services
         {
             var order = _OrderDtoMapper.Create(orderDto);
             var createdOrder = _OrderRepository.CreateOrder(order);
+            GenerateDocument(createdOrder);
             return _OrderDtoMapper.Map(createdOrder);
         }
 
@@ -28,6 +30,10 @@ namespace MicroServiceEduOrder.Application.Services
         {
             var order = _OrderRepository.GetOrder(orderId);
             return _OrderDtoMapper.Map(order);
+        }
+        private void GenerateDocument(IOrder order)
+        {
+
         }
     }
 }

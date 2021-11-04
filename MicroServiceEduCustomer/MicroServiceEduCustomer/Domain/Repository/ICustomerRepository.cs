@@ -9,6 +9,7 @@ namespace MicroServiceEduCustomer.Domain.Repository
     public interface ICustomerRepository
     {
         public ICustomer GetCustomer(int customerId);
+        public IEnumerable<ICustomer> GetCustomers();
         public ICustomer CreateCustomer(ICustomer customer);
     }
 }

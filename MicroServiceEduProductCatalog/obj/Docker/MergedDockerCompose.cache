@@ -1,0 +1,16 @@
+services:
+  microserviceeduproductcatalog:
+    build:
+      context: C:\udv\education\MicroServiceEduProductCatalog
+      dockerfile: MicroServiceEduProductCatalog/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: microserviceeduproductcatalog
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\rsc\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\rsc\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

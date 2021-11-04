@@ -31,6 +31,19 @@ namespace MicroServiceEduCustomer.Persistence.Repository
             var customerEf = GetCustomerEf(customerId);
             return _CustomerEfMapper.Map(customerEf);
         }
+
+        public IEnumerable<ICustomer> GetCustomers()
+        {
+
+            var customersEf = _Context.Customers.ToList();
+            List<ICustomer> customers = new List<ICustomer>();
+            foreach (CustomerEf e in customersEf)
+            {
+                customers.Add(_CustomerEfMapper.Map(e));
+            }
+            return customers;
+        }
+
         private CustomerEf GetCustomerEf(int customerId)
         {
             return _Context.Customers.FirstOrDefault(c => c.ID == customerId);

@@ -5,7 +5,7 @@ services:
       SA_PASSWORD: Your_password123
     image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
-    - published: 12433
+    - published: 17433
       target: 1433
     restart: always
   microserviceeducustomer:
@@ -17,6 +17,8 @@ services:
       ASPNETCORE_URLS: https://+:443;http://+:80
     image: microserviceeducustomer
     ports:
+    - published: 8080
+      target: 80
     - target: 80
     - target: 443
     volumes:

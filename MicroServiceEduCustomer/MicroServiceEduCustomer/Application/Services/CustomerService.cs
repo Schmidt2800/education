@@ -1,5 +1,6 @@
 ﻿using MicroServiceEduCustomer.Application.Mappers;
 using MicroServiceEduCustomer.Application.Model;
+using MicroServiceEduCustomer.Domain.Model;
 using MicroServiceEduCustomer.Domain.Repository;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,18 @@ namespace MicroServiceEduCustomer.Application.Services
         {
             var customer = _CustomerRepository.GetCustomer(customerId);
             return _CustomerDtoMapper.Map(customer);
+        }
+
+        public IEnumerable<CustomerDto> GetAll()
+        {
+            var customers = _CustomerRepository.GetCustomers();
+
+            List<CustomerDto> customersDto = new List<CustomerDto>();
+            foreach (ICustomer e in customers)
+            {
+                customersDto.Add(_CustomerDtoMapper.Map(e));
+            }
+            return customersDto;
         }
     }
 }
