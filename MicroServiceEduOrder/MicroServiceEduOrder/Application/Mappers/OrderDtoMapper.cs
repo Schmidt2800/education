@@ -12,7 +12,9 @@ namespace MicroServiceEduOrder.Application.Mappers
                 ID = orderDto.ID,
                 CustomerId = orderDto.CustomerId,
                 OrderNo = orderDto.OrderNo,
-                Products = orderDto.Products
+                Products = orderDto.Products,
+                TotalAmount = orderDto.TotalAmount
+               
             };
 
             return order;
@@ -26,7 +28,8 @@ namespace MicroServiceEduOrder.Application.Mappers
                 ID = order.ID,
                 CustomerId = order.CustomerId,
                 OrderNo = order.OrderNo,
-                Products = order.Products
+                Products = order.Products,
+                TotalAmount = order.TotalAmount
             };
     
             return orderDto;

@@ -10,6 +10,8 @@ namespace MicroServiceEduDocumentGenerator.Domain.Model
         public string OrderNo { get; set; }
         public int CustomerNo { get; set; }
         public string CustomerName { get; set; }
+        public decimal TotalAmount { get; set; }
+     
         public DateTime OrderDate { get; set; }
     }
 }

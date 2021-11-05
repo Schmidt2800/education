@@ -3,6 +3,7 @@ using MicroServiceEduOrder.Application.Model;
 using MicroServiceEduOrder.Domain.Model;
 using MicroServiceEduOrder.Domain.Repository;
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 
@@ -46,6 +47,8 @@ namespace MicroServiceEduOrder.Application.Services
 
                 var productJson = await _Client.GetStringAsync(url);
                 products.Add(productJson);
+                var priceToken = JObject.Parse(productJson).SelectToken("$.price");
+                order.TotalAmount += Convert.ToDecimal(priceToken.ToString());
             }
 
             //JObject custObject = JObject.Parse(customer);
