@@ -27,7 +27,7 @@ namespace MicroServiceEduOrder
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<OrderContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(Configuration.GetConnectionString("DockerConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

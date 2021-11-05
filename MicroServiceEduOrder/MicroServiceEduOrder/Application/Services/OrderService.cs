@@ -2,6 +2,7 @@
 using MicroServiceEduOrder.Application.Model;
 using MicroServiceEduOrder.Domain.Model;
 using MicroServiceEduOrder.Domain.Repository;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -36,36 +37,38 @@ namespace MicroServiceEduOrder.Application.Services
         }
         private async void GenerateDocument(IOrder order)
         {
-            //string customerURL = $"http://microserviceeducustomer/Customer/{order.CustomerId}";
-            string customerURL = $"https://localhost:44371/Customer/{order.CustomerId}";
+            var orderDocumentDto = new OrderDocumentDto();
+            orderDocumentDto.OrderNo = order.OrderNo;
+            orderDocumentDto.CustomerNo = order.CustomerId;
+
+            string customerURL = $"http://microserviceeducustomer/Customer/{order.CustomerId}";
+            //string customerURL = $"https://localhost:44371/Customer/{order.CustomerId}";
             var customer = await _Client.GetStringAsync(customerURL);
             //string productURL = $"http://microserviceeduproductcatalog/Product/{order.CustomerId}";
-            List<string> products = new List<string>();
+            
+
             foreach (var productId in order.Products)
             {
-            string url = $"https://localhost:44381/Product/{productId}";
+            string url = $"http://microserviceeduproductcatalog/Product/{productId}";
 
                 var productJson = await _Client.GetStringAsync(url);
-                products.Add(productJson);
-                var priceToken = JObject.Parse(productJson).SelectToken("$.price");
-                order.TotalAmount += Convert.ToDecimal(priceToken.ToString());
+                var productLineDto = JsonConvert.DeserializeObject<ProductLineDto>(productJson);
+                
+                orderDocumentDto.TotalAmount += productLineDto.Price;
+                orderDocumentDto.Products.Add(productLineDto);
             }
 
-            //JObject custObject = JObject.Parse(customer);
-
-            //JObject jsonOrder = new JObject();
-            //jsonOrder.Add("orderNo", order.OrderNo);
-            //jsonOrder.Add("customerNo", custObject.SelectToken("$.id"));
-            //var custName = custObject.SelectToken("$.firstName").ToString() + " " + custObject.SelectToken("$.lastName").ToString();
-            //jsonOrder.Add("customerName", custName);
-            //HttpRequestMessage requestMessage = new HttpRequestMessage();
-
-            //requestMessage.Method = HttpMethod.Post;
-            //requestMessage.RequestUri = new System.Uri("http://microserviceedudocumentgenerator/Document");
-            //requestMessage.Content = new StringContent(jsonOrder.ToString(), System.Text.Encoding.UTF8, "application/json");
-
-
-            //var result = _Client.Send(requestMessage);
+            JObject custObject = JObject.Parse(customer);
+           
+            orderDocumentDto.CustomerName = custObject.SelectToken("$.firstName").ToString() + " " + custObject.SelectToken("$.lastName").ToString();
+            var jsonOrder = JsonConvert.SerializeObject(orderDocumentDto);
+       
+            HttpRequestMessage requestMessage = new HttpRequestMessage();
+            requestMessage.Method = HttpMethod.Post;
+            requestMessage.RequestUri = new System.Uri("http://microserviceedudocumentgenerator/Document");
+            //requestMessage.RequestUri = new System.Uri("https://localhost:44384/Document");
+            requestMessage.Content = new StringContent(jsonOrder, System.Text.Encoding.UTF8, "application/json");
+            var result = _Client.Send(requestMessage);
 
 
         }
