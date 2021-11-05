@@ -1,15 +1,11 @@
 {
   "profiles": {
-    "Docker Compose": {
+    "1": {
       "commandName": "DockerCompose",
-      "composeLaunchServiceName": "microserviceeduorder",
       "serviceActions": {
-        "db": "StartWithoutDebugging",
         "microserviceeduorder": "StartDebugging"
       },
-      "composeLaunchAction": "LaunchBrowser",
-      "commandVersion": "1.0",
-      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger"
+      "commandVersion": "1.0"
     }
   }
 }

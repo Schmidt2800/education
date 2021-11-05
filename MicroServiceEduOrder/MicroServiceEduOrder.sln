@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceEduOrder", "MicroServiceEduOrder\MicroServiceEduOrder.csproj", "{553E1C0C-976E-49FA-8CBE-24239A4ABC9C}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{BE1C6526-CBA5-4C8A-88CA-A4E8782A685F}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{888B3128-A887-44A8-9EDB-EB34B7FFEBAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{553E1C0C-976E-49FA-8CBE-24239A4ABC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{553E1C0C-976E-49FA-8CBE-24239A4ABC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{553E1C0C-976E-49FA-8CBE-24239A4ABC9C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE1C6526-CBA5-4C8A-88CA-A4E8782A685F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE1C6526-CBA5-4C8A-88CA-A4E8782A685F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE1C6526-CBA5-4C8A-88CA-A4E8782A685F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE1C6526-CBA5-4C8A-88CA-A4E8782A685F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{888B3128-A887-44A8-9EDB-EB34B7FFEBAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{888B3128-A887-44A8-9EDB-EB34B7FFEBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{888B3128-A887-44A8-9EDB-EB34B7FFEBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{888B3128-A887-44A8-9EDB-EB34B7FFEBAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

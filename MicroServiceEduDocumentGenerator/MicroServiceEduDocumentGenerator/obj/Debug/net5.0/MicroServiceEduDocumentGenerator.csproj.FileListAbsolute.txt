@@ -28,3 +28,5 @@ C:\udv\education\MicroServiceEduDocumentGenerator\MicroServiceEduDocumentGenerat
 C:\udv\education\MicroServiceEduDocumentGenerator\MicroServiceEduDocumentGenerator\obj\Debug\net5.0\MicroServiceEduDocumentGenerator.genruntimeconfig.cache
 C:\udv\education\MicroServiceEduDocumentGenerator\MicroServiceEduDocumentGenerator\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\udv\education\MicroServiceEduDocumentGenerator\MicroServiceEduDocumentGenerator\bin\Debug\net5.0\Persistence\Data\SO-001.json
+C:\udv\education\MicroServiceEduDocumentGenerator\MicroServiceEduDocumentGenerator\bin\Debug\net5.0\Persistence\Data\.json
+C:\udv\education\MicroServiceEduDocumentGenerator\MicroServiceEduDocumentGenerator\bin\Debug\net5.0\Persistence\Data\SO002.json

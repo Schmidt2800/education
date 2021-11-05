@@ -2,10 +2,7 @@
 using MicroServiceEduOrder.Domain.Repository;
 using MicroServiceEduOrder.Persistence.Mappers;
 using MicroServiceEduOrder.Persistence.Model;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MicroServiceEduOrder.Persistence.Repository
 {

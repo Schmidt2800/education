@@ -57,3 +57,4 @@ C:\udv\education\MicroServiceEduOrder\MicroServiceEduOrder\obj\Debug\net5.0\Micr
 C:\udv\education\MicroServiceEduOrder\MicroServiceEduOrder\obj\Debug\net5.0\ref\MicroServiceEduOrder.dll
 C:\udv\education\MicroServiceEduOrder\MicroServiceEduOrder\obj\Debug\net5.0\MicroServiceEduOrder.pdb
 C:\udv\education\MicroServiceEduOrder\MicroServiceEduOrder\obj\Debug\net5.0\MicroServiceEduOrder.genruntimeconfig.cache
+C:\udv\education\MicroServiceEduOrder\MicroServiceEduOrder\obj\Debug\net5.0\MicroServiceEduOrder.csproj.AssemblyReference.cache

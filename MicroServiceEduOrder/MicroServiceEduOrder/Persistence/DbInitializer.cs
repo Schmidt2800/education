@@ -1,8 +1,5 @@
 ﻿using MicroServiceEduOrder.Persistence.Model;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace MicroServiceEduOrder.Persistence
 {
@@ -28,12 +25,30 @@ namespace MicroServiceEduOrder.Persistence
                     OrderNo = "SO002"
                 },
             };
-
             foreach (OrderEf order in orders)
             {
                 context.Orders.Add(order);
             }
             context.SaveChanges();
+            //var orderLines = new OrderLineEf[]
+            //{
+            //    new OrderLineEf{
+            //        Order = orders[0],
+            //        OrderID = orders[0].ID,
+            //        Price = 10.25M
+            //    },
+            //    new OrderLineEf{
+            //        Order = orders[0],
+            //        OrderID = orders[0].ID,
+            //        Price = 10.25M
+            //    }
+            //};
+
+            //foreach (OrderLineEf line in orderLines)
+            //{
+            //    context.OrderLines.Add(line);
+            //}
+            //context.SaveChanges();
         }
     }
 }

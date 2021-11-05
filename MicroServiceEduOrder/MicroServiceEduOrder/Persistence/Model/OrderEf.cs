@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace MicroServiceEduOrder.Persistence.Model
 {
@@ -10,5 +7,7 @@ namespace MicroServiceEduOrder.Persistence.Model
         public int ID { get; set; }
         public int CustomerId { get; set; }
         public string OrderNo { get; set; }
+       
+
     }
 }

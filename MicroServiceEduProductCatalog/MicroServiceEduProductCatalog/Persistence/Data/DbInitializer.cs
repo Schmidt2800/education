@@ -23,7 +23,32 @@ namespace MicroServiceEduProductCatalog.Persistence.Data
                  Name = "Cykel",
                  Price = 999.95M,
                  EAN = "0898878987"
-                }
+                },
+                  new ProductEf{
+                 Name = "Hoppebold",
+                 Price = 123.95M,
+                 EAN = "0898878987"
+                },
+                  new ProductEf{
+                 Name = "Headset",
+                 Price = 2223.95M,
+                 EAN = "hjoj8987"
+                },
+                  new ProductEf{
+                 Name = "Computermus",
+                 Price = 399.95M,
+                 EAN = "0878jfd8987"
+                },
+                  new ProductEf{
+                 Name = "PC Skærm",
+                 Price = 1223.95M,
+                 EAN = "0897768987"
+                },
+                  new ProductEf{
+                 Name = "Desktop PC",
+                 Price = 9223.95M,
+                 EAN = "hjoj8987"
+                },
             };
 
             foreach (ProductEf product in products)

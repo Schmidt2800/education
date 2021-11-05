@@ -1,9 +1,5 @@
 ﻿using MicroServiceEduOrder.Application.Model;
 using MicroServiceEduOrder.Domain.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MicroServiceEduOrder.Application.Mappers
 {
@@ -15,13 +11,9 @@ namespace MicroServiceEduOrder.Application.Mappers
             {
                 ID = orderDto.ID,
                 CustomerId = orderDto.CustomerId,
-                OrderNo = orderDto.OrderNo
+                OrderNo = orderDto.OrderNo,
+                Products = orderDto.Products
             };
-
-            foreach(var productId in orderDto.Products)
-            {
-                order.Products.Add(productId);
-            }
 
             return order;
 
@@ -33,12 +25,10 @@ namespace MicroServiceEduOrder.Application.Mappers
             {
                 ID = order.ID,
                 CustomerId = order.CustomerId,
-                OrderNo = order.OrderNo
+                OrderNo = order.OrderNo,
+                Products = order.Products
             };
-            foreach(var productId in order.Products)
-            {
-                orderDto.Products.Add(productId);
-            }
+    
             return orderDto;
         }
     }

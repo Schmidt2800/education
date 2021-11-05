@@ -20,3 +20,4 @@ C:\udv\education\MicroServiceEduOrder\bin\Debug\MicroServiceEduOrder.pdb
 C:\udv\education\MicroServiceEduOrder\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 C:\udv\education\MicroServiceEduOrder\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 C:\udv\education\MicroServiceEduOrder\obj\Debug\docker-compose.dcproj.CopyComplete
+C:\udv\education\MicroServiceEduOrder\bin\Debug\Newtonsoft.Json.dll

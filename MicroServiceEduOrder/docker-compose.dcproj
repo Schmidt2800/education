@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>be1c6526-cba5-4c8a-88ca-a4e8782a685f</ProjectGuid>
+    <ProjectGuid>888b3128-a887-44a8-9edb-eb34b7ffebaf</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>microserviceeduorder</DockerServiceName>

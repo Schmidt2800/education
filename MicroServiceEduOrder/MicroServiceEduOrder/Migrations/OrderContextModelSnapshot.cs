@@ -35,6 +35,27 @@ namespace MicroServiceEduOrder.Migrations
 
                     b.ToTable("Order");
                 });
+
+            modelBuilder.Entity("MicroServiceEduOrder.Persistence.Model.OrderLineEf", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("OrderID")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ProductID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("OrderLine");
+                });
 #pragma warning restore 612, 618
         }
     }

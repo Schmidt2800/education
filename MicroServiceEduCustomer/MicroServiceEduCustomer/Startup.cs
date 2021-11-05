@@ -27,7 +27,7 @@ namespace MicroServiceEduCustomer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<CustomerContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("DockerConnection")));
+    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

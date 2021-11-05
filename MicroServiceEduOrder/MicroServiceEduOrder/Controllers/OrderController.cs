@@ -1,10 +1,6 @@
 ﻿using MicroServiceEduOrder.Application.Model;
 using MicroServiceEduOrder.Application.Services;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MicroServiceEduOrder.Controllers
 {
@@ -26,7 +22,9 @@ namespace MicroServiceEduOrder.Controllers
             var order = _OrderService.Get(id);
 
             if (order == null)
+            {
                 return NotFound();
+            }
 
             return order;
         }

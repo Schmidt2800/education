@@ -7,10 +7,10 @@ services:
       context: .
       dockerfile: MicroServiceEduOrder/Dockerfile
   db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    restart: always
-    ports:
-     - 13433:1433
-    environment:
-        SA_PASSWORD: Your_password123
-        ACCEPT_EULA: Y
+   image: mcr.microsoft.com/mssql/server:2019-latest
+   restart: always
+   ports:
+    - 12433:1433 
+   environment:
+       SA_PASSWORD: Your_password123
+       ACCEPT_EULA: Y  
